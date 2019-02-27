@@ -5,9 +5,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HeroController {
 
-    @RequestMapping("/hero")
+    private Gson gson;
+    private Heroes heroes = new Heroes();
+
+    public HeroController(){
+        gson = new Gson();
+    }
+
+    @RequestMapping(method=GET,"/hero")
     public Hero getHero(@RequestParam(value="id") int id){
 
-        return
+        return heroes.getHero(id);
+    }
+
+    @RequestMapping(method=GET, "/hero")
+    public Hero getHero(){
+
+        return heroes.getHeroes();
+    }
+
+    @RequestMapping(method=POST, "/hero")
+    public void getHero(@RequestParam(value="name") String name){
+
+        heroes.addHero(name);
     }
 }
