@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddd0d89d-0ae6-43d0-8310-aa44b24cd51f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/Hero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/HeroesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/HeroesNotFoundAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/HeroesNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/HeroesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/HeroesResourceAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/LoadDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HeroController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Heroes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/HeroesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/HeroesController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -137,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/HeroesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1121">
-              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            <state relative-caret-position="748">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,12 +173,12 @@
         <option value="$PROJECT_DIR$/src/main/java/application/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/LoadDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/HeroesRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/HeroesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/Hero.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/HeroesController.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -250,7 +234,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551787435125" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551788050587" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tut-rest" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -347,7 +331,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299595" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.49696356" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.49696356" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6983806" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -475,8 +459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/HeroesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1121">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        <state relative-caret-position="748">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
