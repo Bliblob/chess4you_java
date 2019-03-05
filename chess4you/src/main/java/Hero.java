@@ -1,6 +1,6 @@
 public class Hero {
 
-    public int id;
+    public int id = 1;
     public String name = "Yannick";
 
     //public Hero(int id, String name){
