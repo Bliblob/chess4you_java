@@ -69,7 +69,13 @@ public class HeroesController {
     }
 
     @DeleteMapping("heroes/{id}")
-    void deleteHero(@PathVariable Long id){
+    Resource<Hero> deleteHero(@PathVariable Long id){
+
+        Hero hero = repository.findById(id)
+                .orElseThrow(()-> new HeroesNotFoundException(id));
+
         repository.deleteById(id);
+
+        return assembler.toResource(hero);
     }
 }
