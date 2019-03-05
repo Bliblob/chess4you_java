@@ -38,8 +38,10 @@ public class HeroesController {
     }
 
     @PostMapping("/heroes")
-    Hero addHero(@RequestBody Hero hero){
-        return repository.save(hero);
+    Resource<Hero> addHero(@RequestBody Hero newHero){
+
+        Hero hero = repository.save(newHero);
+        return assembler.toResource(hero);
     }
 
     @GetMapping("/heroes/{id}")
@@ -52,17 +54,18 @@ public class HeroesController {
     }
 
     @PutMapping("/heroes/{id}")
-    Hero putHero(@RequestBody Hero newHero, @PathVariable Long id) {
+    Resource<Hero> putHero(@RequestBody Hero newHero, @PathVariable Long id) {
 
-        return repository.findById(id)
-                .map(hero -> {
-                    hero.setName(newHero.getName());
-                    return repository.save(hero);
+        Hero hero =  repository.findById(id)
+                .map(tmpHero -> {
+                    tmpHero.setName(newHero.getName());
+                    return repository.save(tmpHero);
                 })
                 .orElseGet(()-> {
                     newHero.setId(id);
                     return repository.save(newHero);
                 });
+        return assembler.toResource(hero);
     }
 
     @DeleteMapping("heroes/{id}")
