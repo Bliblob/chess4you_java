@@ -1,13 +1,13 @@
 public class Hero {
 
     public int id;
-    public String name;
+    public String name = "Yannick";
 
-    public Hero(int id, String name){
+    //public Hero(int id, String name){
 
-        this.id = id;
-        this.name = name;
-    }
+        //this.id = id;
+        //this.name = name;
+    //}
 
     public int getId() {
         return id;

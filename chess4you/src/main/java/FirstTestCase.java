@@ -4,7 +4,9 @@ public class FirstTestCase {
 
 	@org.junit.Test
 	public void test() {
-		fail("Not yet implemented");
+		Hero hero = new Hero();
+		String name = hero.getName();
+		assertEquals("Yannick", name);
 	}
 
 }
