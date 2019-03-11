@@ -30,4 +30,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.6'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok:1.18.6'
+
+    //for JUnit
+    testCompile  'junit:junit:4.11'
+}
+
+//for JUnit
+sourceSets {
+    srcDirs = ["test/java/application"]
 }
