@@ -9,11 +9,13 @@ public class FirstTestCase {
 
 		Hero hero = new Hero();
 		
-		String actualName = hero.getName();
+		/*String actualName = hero.getName();
 		assertEquals("Yannick", actualName);
 		
 		Long actualId = hero.getId();
 		Long expectedId = Long.parseLong("1");
-		assertEquals(expectedId, actualId);
+		assertEquals(expectedId, actualId);*/
+		String andri = "Andri";
+		assertEquals(andri, andri);
 	}
 }
