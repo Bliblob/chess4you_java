@@ -34,8 +34,3 @@ dependencies {
     //for JUnit
     testCompile  'junit:junit:4.11'
 }
-
-//for JUnit
-sourceSets {
-    srcDirs = ["test/java/application"]
-}
