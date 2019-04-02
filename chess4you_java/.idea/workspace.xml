@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc5d25d-7441-4fc7-a437-cb1081ff0f95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/server/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
@@ -10,9 +14,33 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/prettify.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-resources/sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Application.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Application.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Application.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Hero.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Hero.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Hero.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/Hero.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesController.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundAdvice.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundAdvice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundAdvice.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundAdvice.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundException.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesNotFoundException.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesResourceAssembler.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesResourceAssembler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesResourceAssembler.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/HeroesResourceAssembler.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/LoadDatabase.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/LoadDatabase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/LoadDatabase.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/LoadDatabase.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoHtml/server/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_coverage/reports/jacocoXml/jacocoXml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code_coverage/reports/jacocoXml/jacocoXml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run_code_coverage.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run_sonar_scanner.bat" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -50,7 +78,13 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="chess4you" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="chess4you" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -64,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="30" column="112" selection-start-line="30" selection-start-column="112" selection-end-line="30" selection-end-column="112" />
+            <state relative-caret-position="54">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -106,6 +140,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,6 +152,11 @@
             <path>
               <item name="chess4you" type="b2602c69:ProjectViewProjectNode" />
               <item name="chess4you_java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chess4you" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chess4you_java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -136,27 +177,6 @@
               <item name="chess4you_java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chess4you" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chess4you_java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="chess4you" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chess4you_java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chess4you" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chess4you_java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -164,12 +184,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554202434885" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554204471892" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -193,20 +212,63 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.chess4you_java [jacocoTestReport]">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.Application" />
-      <module name="chess4you.chess4you.main" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=8099" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.chess4you_java [build]">
+    <configuration name="chess4you_java [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="chess4you_java [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="chess4you_java [buildNeeded]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildNeeded" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="chess4you_java [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -227,7 +289,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="chess4you_java [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="chess4you_java [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -238,45 +300,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jacocoTestCoverageVerification" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="chess4you_java [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jacocoTestReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="chess4you_java [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -317,21 +341,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Application" />
-      <item itemvalue="Gradle.chess4you_java [jacocoTestReport]" />
-      <item itemvalue="Gradle.chess4you_java [test]" />
       <item itemvalue="JUnit.FirstTestCase" />
       <item itemvalue="JUnit.TestCase" />
-      <item itemvalue="Gradle.chess4you_java [jacocoTestCoverageVerification]" />
+      <item itemvalue="Gradle.chess4you_java [bootJar]" />
+      <item itemvalue="Gradle.chess4you_java [buildDependents]" />
+      <item itemvalue="Gradle.chess4you_java [buildNeeded]" />
+      <item itemvalue="Gradle.chess4you_java [clean]" />
       <item itemvalue="Gradle.chess4you_java [build]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.chess4you_java [build]" />
-        <item itemvalue="Gradle.chess4you_java [jacocoTestCoverageVerification]" />
-        <item itemvalue="Gradle.chess4you_java [test]" />
-        <item itemvalue="Gradle.chess4you_java [jacocoTestReport]" />
-        <item itemvalue="Application.Application" />
+        <item itemvalue="Gradle.chess4you_java [clean]" />
+        <item itemvalue="Gradle.chess4you_java [buildNeeded]" />
+        <item itemvalue="Gradle.chess4you_java [buildDependents]" />
+        <item itemvalue="Gradle.chess4you_java [bootJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -390,9 +414,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1180" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15891892" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16259168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -401,7 +425,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49945945" weight="0.28643724" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49945945" weight="0.28555432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,7 +440,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" visible="true" weight="0.10216216" />
+      <window_info anchor="right" id="Gradle" order="5" visible="true" weight="0.26589242" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -488,13 +512,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/server/FirstTestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/server/FirstTestCase.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/server/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -504,8 +522,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="30" column="112" selection-start-line="30" selection-start-column="112" selection-end-line="30" selection-end-column="112" />
+        <state relative-caret-position="54">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -566,7 +584,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
