@@ -28,9 +28,9 @@ jacoco {
 jacocoTestReport {
     reports {
         xml.enabled true
-        xml.destination file("C:/git/chess4you_java/chess4you/code_coverage/reports/jacocoXml/jacocoXml")
+        xml.destination file("C:/git/chess4you_java/chess4you_java/code_coverage/reports/jacocoXml/jacocoXml")
         csv.enabled false
-        html.destination file("C:/git/chess4you_java/chess4you/code_coverage/reports/jacocoHtml")
+        html.destination file("C:/git/chess4you_java/chess4you_java/code_coverage/reports/jacocoHtml")
     }
 }
 
