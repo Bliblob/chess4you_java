@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc5d25d-7441-4fc7-a437-cb1081ff0f95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/server/TestClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
@@ -61,25 +61,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-482">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/server/FirstTestCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="241">
+              <caret line="30" column="112" selection-start-line="30" selection-start-column="112" selection-end-line="30" selection-end-column="112" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -90,13 +88,15 @@
         <option value="$PROJECT_DIR$/src/main/java/server/HeroesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/Hero.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/LoadDatabase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/server/FirstTestCase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/server/TestClass.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-182" />
-    <option name="y" value="113" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-201" />
+    <option name="y" value="-12" />
     <option name="width" value="1938" />
     <option name="height" value="1143" />
   </component>
@@ -106,8 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,11 +164,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554201556126" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554202434885" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
@@ -193,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.chess4you_java [test]">
+  <component name="RunManager" selected="Gradle.chess4you_java [jacocoTestReport]">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.Application" />
       <module name="chess4you.chess4you.main" />
@@ -208,7 +208,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="chess4you_java [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="chess4you_java [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -219,7 +219,26 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootJar" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="chess4you_java [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestCoverageVerification" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -265,7 +284,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FirstTestCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTestCase" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="chess4you.chess4you.test" />
       <extension name="coverage">
         <pattern>
@@ -280,20 +299,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCase" type="JUnit" factoryName="JUnit">
+      <module name="chess4you.chess4you.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="server" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Application" />
-      <item itemvalue="Gradle.chess4you_java [bootJar]" />
       <item itemvalue="Gradle.chess4you_java [jacocoTestReport]" />
       <item itemvalue="Gradle.chess4you_java [test]" />
       <item itemvalue="JUnit.FirstTestCase" />
+      <item itemvalue="JUnit.TestCase" />
+      <item itemvalue="Gradle.chess4you_java [jacocoTestCoverageVerification]" />
+      <item itemvalue="Gradle.chess4you_java [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.chess4you_java [build]" />
+        <item itemvalue="Gradle.chess4you_java [jacocoTestCoverageVerification]" />
         <item itemvalue="Gradle.chess4you_java [test]" />
-        <item itemvalue="JUnit.FirstTestCase" />
         <item itemvalue="Gradle.chess4you_java [jacocoTestReport]" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="Gradle.chess4you_java [bootJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -323,11 +361,38 @@
     <history-entry file="chess4you_java_[test] - 2019.04.02 at 12h 36m 42s.xml">
       <configuration name="chess4you_java [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="chess4you_java_[test] - 2019.04.02 at 12h 38m 20s.xml">
+      <configuration name="chess4you_java [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCase - 2019.04.02 at 12h 42m 44s.xml">
+      <configuration name="TestCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTestCase - 2019.04.02 at 12h 43m 11s.xml">
+      <configuration name="FirstTestCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="chess4you_java_[test] - 2019.04.02 at 12h 46m 40s.xml">
+      <configuration name="chess4you_java [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="chess4you_java_[test] - 2019.04.02 at 12h 47m 41s.xml">
+      <configuration name="chess4you_java [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="chess4you_java_[test] - 2019.04.02 at 12h 50m 47s.xml">
+      <configuration name="chess4you_java [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1180" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2583784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15891892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -336,13 +401,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49945945" visible="true" weight="0.85222673" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49945945" weight="0.28643724" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299595" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299595" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3299595" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50054055" side_tool="true" weight="0.33805668" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.31871346" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.35436383" />
@@ -351,7 +416,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" weight="0.32972974" />
+      <window_info anchor="right" id="Gradle" order="5" visible="true" weight="0.10216216" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -423,17 +488,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/test/java/server/FirstTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-482">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="532">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/server/FirstTestCase.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/server/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="353">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="30" column="112" selection-start-line="30" selection-start-column="112" selection-end-line="30" selection-end-column="112" />
         </state>
       </provider>
     </entry>
