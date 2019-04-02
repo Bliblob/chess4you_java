@@ -1,4 +1,6 @@
-cd c:\git\chess4you_java\chess4you
+cd c:\git\chess4you_java\chess4you_java
 git pull
-call run_code_coverage.bat
-call run_sonar_scanner.bat
+cd c:\git\chess4you_java\chess4you_java\scripts
+call run_code_coverage
+cd c:\git\chess4you_java\chess4you_java\scripts
+call run_sonar_scanner
