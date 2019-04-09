@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} chess4you_java-1.0-SNAPSHOT.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/chess4you_java-1.0-SNAPSHOT.jar"]
