@@ -4,11 +4,9 @@ node {
    }
    stage('CleanNBuild') {
       if (isUnix()) {
-         sh "cd /chess4you_java/"
          sh "gradlew clean"
          sh "gradlew build"
       } else {
-         bat("cd /chess4you_java/")
          bat("gradlew clean")
          bat("gradlew build")
       }
