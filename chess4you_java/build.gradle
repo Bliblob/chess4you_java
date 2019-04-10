@@ -15,6 +15,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.sonarqube'
 apply plugin: 'jacoco'
+apply plugin: 'war'
 
 group 'chess4you'
 version '1.0-SNAPSHOT'
@@ -45,17 +46,19 @@ repositories {
     mavenCentral()
 }
 
+war {
+    enabled = true
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    compile("com.google.code.gson:gson:2.8.2")
-    compile("org.springframework.boot:spring-boot-starter-hateoas")
+    compile 'org.springframework.boot:spring-boot-starter-hateoas'
     compileOnly 'org.projectlombok:lombok:1.18.6'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok:1.18.6'
     testImplementation "org.jacoco:org.jacoco.agent:0.8.3"
     testImplementation "org.jacoco:org.jacoco.ant:0.8.3"
-    //for JUnit
     testCompile  'junit:junit:4.11'
 }
