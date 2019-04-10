@@ -27,8 +27,7 @@ node {
       if (isUnix()) {
          sh "gradlew war"
       } else {
-         bat("gradlew war")
-         bat("copy 'C:\git\chess4you_java\chess4you_java\build\libs\chess4you-1.0-SNAPSHOT.war' ''")
+         bat("call /scripts/deployToTomcat")
       }
    }
 }
