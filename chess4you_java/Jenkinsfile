@@ -7,8 +7,7 @@ node {
          sh "gradlew clean"
          sh "gradlew build"
       } else {
-         bat("gradlew clean")
-         bat("gradlew build")
+         bat("call /scripts/cleanNBuild")
       }
    }
    stage('RunCodeCoverage') {
