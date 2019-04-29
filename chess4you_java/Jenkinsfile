@@ -1,0 +1,30 @@
+node {
+   stage('Preparation') {
+      git 'https://github.com/Bliblob/chess4you_java.git'
+   }
+   stage('CleanNBuild') {
+      if (isUnix()) {
+         sh "gradlew clean"
+         sh "gradlew build"
+      } else {
+         bat("call /scripts/cleanNBuild")
+      }
+   }
+   stage('RunCodeCoverage') {
+      if (isUnix()) {
+         sh "gradlew jacoco"
+      } else {
+         bat("gradlew jacoco")
+      }
+   }
+   stage('RunSonarScanner') {
+		bat("call /scripts/runSonarScanner")
+   }
+   stage('DeployToTomcat') {
+      if (isUnix()) {
+         sh "gradlew war"
+      } else {
+         bat("call /scripts/deployToTomcat")
+      }
+   }
+}
