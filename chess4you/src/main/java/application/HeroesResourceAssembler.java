@@ -12,9 +12,8 @@ public class HeroesResourceAssembler implements ResourceAssembler<Hero, Resource
     @Override
     public Resource<Hero> toResource(Hero hero) {
 
-        return new Resource<Hero>(hero,
+        return new Resource<>(hero,
                 linkTo(methodOn(HeroesController.class).getHero(hero.getId())).withSelfRel(),
-                linkTo(methodOn(HeroesController.class).getAllHeroes()).withRel("hero")
-                );
+                linkTo(methodOn(HeroesController.class).getAllHeroes()).withRel("hero"));
     }
 }

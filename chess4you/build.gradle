@@ -37,5 +37,5 @@ dependencies {
 
 //for JUnit
 sourceSets {
-    srcDirs = ["test/java/application"]
+    srcDirs = ["test/java/application/"]
 }
