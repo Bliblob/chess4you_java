@@ -4,13 +4,10 @@ node {
    }
    stage('CleanNBuild') {
       if (isUnix()) {
-         sh "cd /chess4you_java/"
          sh "gradlew clean"
          sh "gradlew build"
       } else {
-         bat("cd /chess4you_java/")
-         bat("gradlew clean")
-         bat("gradlew build")
+         bat("call /scripts/cleanNBuild")
       }
    }
    stage('RunCodeCoverage') {
@@ -21,18 +18,13 @@ node {
       }
    }
    stage('RunSonarScanner') {
-      if (isUnix()) {
-         sh "gradlew sonarqube -Dsonar.projectKey=Bliblob_chess4you_java -Dsonar.organization=bliblob-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=8e02fdf4fcad6835a4d7a5ac17e9573375c498f6 -Dsonar.coverage.jacoco.xmlReportPaths=C:\git\chess4you_java\chess4you_java\code_coverage\reports\jacocoXml\jacocoXml.xml"
-      } else {
-         bat("gradlew sonarqube -Dsonar.projectKey=Bliblob_chess4you_java -Dsonar.organization=bliblob-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=8e02fdf4fcad6835a4d7a5ac17e9573375c498f6 -Dsonar.coverage.jacoco.xmlReportPaths=C:\git\chess4you_java\chess4you_java\code_coverage\reports\jacocoXml\jacocoXml.xml")
-      }
+		bat("call /scripts/runSonarScanner")
    }
    stage('DeployToTomcat') {
       if (isUnix()) {
          sh "gradlew war"
       } else {
-         bat("gradlew war")
-         bat("copy 'C:\git\chess4you_java\chess4you_java\build\libs\chess4you-1.0-SNAPSHOT.war' ''")
+         bat("call /scripts/deployToTomcat")
       }
    }
 }
