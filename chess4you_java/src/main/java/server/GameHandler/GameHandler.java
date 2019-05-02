@@ -7,8 +7,7 @@ public class GameHandler {
     private GameHandlerService gameHandlerService;
     private ArrayList<GameClient> gameClients = new ArrayList<>();
 
-    public GameHandler(GameHandlerService gameHandlerService){
-        this.gameHandlerService = gameHandlerService;
+    public GameHandler(){
     }
 
     public void registerGame(){
