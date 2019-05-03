@@ -3,8 +3,6 @@ package server.GameHandler;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,32 +24,32 @@ public class GameHandlerService {
         this.lobbyHandler = lobbyHandler;
         gson = new Gson();
     }
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/getListLobby")
     String getListLobby(){
         return gson.toJson(lobbyHandler.getListLobby());
     }
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/getLobby/{uuid}")
     String getLobby(@PathVariable String uuid){
         UUID correctUuid = UUID.fromString(uuid);
         return gson.toJson(lobbyHandler.getLobby(correctUuid));
     }
-    @CrossOrigin
-    @GetMapping("/initLobby/{playerName}")
-    String initLobby(@PathVariable String playerName){
-        return gson.toJson(lobbyHandler.initLobby(playerName));
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/initLobby/{playerName}/{color}")
+    String initLobby(@PathVariable("playerName") String playerName, @PathVariable("color") String color){
+        return gson.toJson(lobbyHandler.initLobby(playerName, color));
     }
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/joinLobby/{playerName}/{uuid}")
     String joinLobby(@PathVariable("playerName") String playerName, @PathVariable("uuid") String uuid){
         UUID correctUuid = UUID.fromString(uuid);
-        return gson.toJson(lobbyHandler.joinLobby(playerName, correctUuid));
+        return gson.toJson(lobbyHandler.JoinLobby(playerName, correctUuid));
     }
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("getUpdateLobby/{uuid}")
     String getUpdateLobby(@PathVariable String uuid){
         UUID correctUuid = UUID.fromString(uuid);

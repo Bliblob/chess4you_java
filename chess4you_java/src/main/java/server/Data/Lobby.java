@@ -22,6 +22,9 @@ public class Lobby {
         PlayerTwo = playerTwo;
         StartGame = true;
     }
+    public boolean getStartGame(){
+        return StartGame;
+    }
     public Player getPlayerOne() {
         return PlayerOne;
     }
