@@ -1,4 +1,4 @@
-package server.GameHandler;
+package server.Handler;
 
 public class Game {
 

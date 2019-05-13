@@ -1,4 +1,4 @@
-package server.GameHandler;
+package server.Controller;
 
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -14,13 +14,13 @@ import java.util.UUID;
 
 @Slf4j
 @RestController
-public class GameHandlerService {
+public class LobbyController {
 
     private LobbyHandler lobbyHandler;
     private Gson gson;
 
     @Autowired
-    GameHandlerService(LobbyHandler lobbyHandler) {
+    LobbyController(LobbyHandler lobbyHandler) {
         this.lobbyHandler = lobbyHandler;
         gson = new Gson();
     }

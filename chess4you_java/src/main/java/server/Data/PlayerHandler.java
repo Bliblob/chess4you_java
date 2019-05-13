@@ -2,7 +2,7 @@ package server.Data;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import server.repository.PlayerRepository;
+import server.Repository.PlayerRepository;
 
 import java.util.HashMap;
 @Component

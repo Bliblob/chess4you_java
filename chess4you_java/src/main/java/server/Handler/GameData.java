@@ -1,4 +1,4 @@
-package server.GameHandler;
+package server.Handler;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;

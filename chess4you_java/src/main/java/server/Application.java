@@ -2,10 +2,8 @@ package server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-import server.repository.PlayerRepository;
+import server.Repository.PlayerRepository;
 
 @SpringBootApplication
 @EnableMongoRepositories(basePackageClasses = PlayerRepository.class)

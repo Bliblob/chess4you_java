@@ -1,10 +1,15 @@
-package server.GameHandler;
+package server.Handler;
+
+import server.Controller.LobbyController;
+import server.Data.Chess.Pawns;
+import server.Data.Chess.Position;
+import server.Data.Chess.e;
 
 import java.util.ArrayList;
 
 public class GameHandler {
 
-    private GameHandlerService gameHandlerService;
+    private LobbyController gameHandlerService;
     private ArrayList<GameClient> gameClients = new ArrayList<>();
 
     public GameHandler(){
@@ -17,7 +22,6 @@ public class GameHandler {
     }
 
     public void notifyClient(String data) {
-
     }
 
     public void notifyServer(String result) {
