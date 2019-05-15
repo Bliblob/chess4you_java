@@ -1,4 +1,6 @@
-package server.Data;
+package server.Data.Lobby;
+
+import server.Data.Game.Player;
 
 import java.util.UUID;
 

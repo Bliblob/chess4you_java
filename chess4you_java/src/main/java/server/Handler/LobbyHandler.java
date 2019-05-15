@@ -1,55 +1,61 @@
-package server.Data;
+package server.Handler;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import server.Data.Game.Player;
+import server.Data.Lobby.Lobby;
+import server.Service.GameService;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.UUID;
 
 @Component
 public class LobbyHandler {
-    private HashMap<UUID,Lobby> ListLobby;
     private PlayerHandler playerHandler;
+    public GameService gameService;
 
     @Autowired
-    public LobbyHandler(PlayerHandler playerHandler) {
+    public LobbyHandler(PlayerHandler playerHandler, GameService gameService) {
         this.playerHandler = playerHandler;
-        ListLobby = new HashMap<>();
+        this.gameService = gameService;
     }
 
     public ArrayList<Lobby> getListLobby() {
-        return new ArrayList<>(ListLobby.values());
+        return new ArrayList<>(gameService.getAllLobby());
     }
 
     public Lobby getLobby(UUID uuid) {
-        return ListLobby.get(uuid);
+        return gameService.getLobby(uuid);
     }
 
     public Lobby initLobby(String playerName, String iColor) {
         Lobby lobby;
         Player player = GetPlayer(playerName);
         var color = iColor == "black" ? true : false;
-        if(!PlayerExistsInLobby(player)) {
+        lobby = new Lobby();
+        player.setColor(color);
+        lobby.setPlayerOne(player);
+        gameService.setGame(lobby);
+        /*if(!PlayerExistsInLobby(player)) {
             lobby = new Lobby();
             player.setColor(color);
             lobby.setPlayerOne(player);
-            ListLobby.put(lobby.getName(), lobby);
+            gameService.setGame(lobby);
         } else {
             lobby = GetLobbyFromPlayer(player);
-        }
+        }*/
         return lobby;
     }
 
     private boolean PlayerExistsInLobby(Player player) {
-        var list = ListLobby.values().stream()
+        var list = gameService.getAllLobby().stream()
                 .filter(data -> data.getPlayerOne().getName() == player.getName())
                 .toArray();
         return list.length == 0 ? false : true;
     }
 
     private Lobby GetLobbyFromPlayer(Player player) {
-        return  ListLobby.values().stream()
+        return  gameService.getAllLobby().stream()
                 .filter(data -> data.getPlayerOne().getName() == player.getName())
                 .findFirst()
                 .get();
@@ -62,7 +68,7 @@ public class LobbyHandler {
         } else if(lobby.getStartGame()) {
         } else {
             lobby.setPlayerTwo(player);
-            ListLobby.put(correctUuid, lobby);
+            //ListLobby.put(correctUuid, lobby);
         }
         return lobby;
     }

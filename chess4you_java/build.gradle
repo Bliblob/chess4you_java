@@ -58,6 +58,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compile 'org.springframework.boot:spring-boot-starter-hateoas'
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    compile 'de.siegmar:fastcsv:1.0.3'
     compileOnly 'org.projectlombok:lombok:1.18.6'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok:1.18.6'

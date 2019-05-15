@@ -1,8 +1,7 @@
-package server.Data.Chess;
+package server.Data.ChessBoard.Movements;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter

@@ -1,7 +1,8 @@
-package server.Data;
+package server.Handler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import server.Data.Game.Player;
 import server.Repository.PlayerRepository;
 
 import java.util.HashMap;

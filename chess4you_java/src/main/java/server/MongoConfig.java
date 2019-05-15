@@ -2,8 +2,8 @@ package server;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import server.Data.LobbyHandler;
-import server.Data.PlayerHandler;
+import server.Handler.LobbyHandler;
+import server.Handler.PlayerHandler;
 
 @Configuration
 @ComponentScan(basePackageClasses = PlayerHandler.class)

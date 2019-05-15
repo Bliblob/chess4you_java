@@ -1,44 +1,23 @@
 package server.Handler;
 
-import server.Controller.LobbyController;
-import server.Data.Chess.Pawns;
-import server.Data.Chess.Position;
-import server.Data.Chess.e;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import server.Game.Game;
+import server.Service.GameService;
 
-import java.util.ArrayList;
+import java.util.UUID;
 
+@Service
 public class GameHandler {
 
-    private LobbyController gameHandlerService;
-    private ArrayList<GameClient> gameClients = new ArrayList<>();
+    private GameService gameService;
 
-    public GameHandler(){
+    @Autowired
+    public GameHandler(GameService gameService) {
+        this.gameService = gameService;
     }
 
-    public void registerGame(){
-        Game game = new Game();
-        game.registerGame(new GameData(new Player("d"), new Player("a")), this);
-        game.initGame();
-    }
-
-    public void notifyClient(String data) {
-    }
-
-    public void notifyServer(String result) {
-
-    }
-
-    public void registerGameClient(GameClient gameClient) {
-
-        gameClients.add(gameClient);
-    }
-
-    public boolean checkIfPossibleOpponentExists(GameClient gameClient) {
-
-        if(gameClients.size() >= 2) {
-            return true;
-        } else {
-            return false;
-        }
+    public Game getGame(String lobbyUuid) {
+        return gameService.getGame(UUID.fromString(lobbyUuid));
     }
 }
