@@ -1,29 +1,20 @@
 package server.Game;
 
-import lombok.Getter;
+import lombok.Data;
 import server.Data.ChessBoard.Board.ChessBoard;
+import server.Data.ChessBoard.Movements.base.Movement;
 import server.Data.Game.Player;
-import server.Data.Lobby.Lobby;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-@Getter
+@Data
 public class Game {
-
     private List<Turn> history;
     private UUID lobby;
-    private Player turn;
+    private Player currentPlayer;
     private ChessBoard board;
-    private boolean isChanged;
-
-    public Game(UUID lobby){
-        board = new ChessBoard();
-        isChanged = false;
-        this.lobby = lobby;
-    }
-    public boolean doTurn(Turn turn) {
-
-        return true;
-    }
+    private Date lastChange;
+    private List<Movement> kingIsThreatenedResult;
 }

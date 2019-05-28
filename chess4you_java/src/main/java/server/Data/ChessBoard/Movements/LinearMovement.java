@@ -1,38 +1,40 @@
 package server.Data.ChessBoard.Movements;
 
 import server.Data.ChessBoard.Board.ChessEnum;
+import server.Data.ChessBoard.Movements.base.Movement;
+import server.Data.ChessBoard.Movements.base.Position;
 
-public interface ILinearMovement {
-    static Movement F(Position position,int Numbers) {
+public class LinearMovement {
+    public Movement F(Position position, int Numbers) {
         return new Movement(
                 new Position(
                         position.getPosX(),
                         position.getPosY()  + Numbers),
-                position, ChessEnum.Direction.FLDiagonal);
+                position, ChessEnum.Direction.Forward);
 
     }
-    static Movement B(Position position,int Numbers) {
+    public Movement B(Position position,int Numbers) {
         return new Movement(
                 new Position(
                         position.getPosX(),
                         position.getPosY() - Numbers),
-                position, ChessEnum.Direction.FLDiagonal);
+                position, ChessEnum.Direction.Backward);
 
     }
-    static Movement L(Position position,int Numbers) {
+    public Movement L(Position position,int Numbers) {
         return new Movement(
                 new Position(
                         position.getPosX() - Numbers,
                         position.getPosY()),
-                position, ChessEnum.Direction.FLDiagonal);
+                position, ChessEnum.Direction.Left);
 
     }
-    static Movement R(Position position,int Numbers) {
+    public Movement R(Position position,int Numbers) {
         return new Movement(
                 new Position(
                         position.getPosX() + Numbers,
                         position.getPosY()),
-                position, ChessEnum.Direction.FLDiagonal);
+                position, ChessEnum.Direction.Right);
 
     }
 }

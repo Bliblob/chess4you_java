@@ -5,14 +5,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import server.Data.ChessBoard.Board.ChessBoard;
-import server.Repository.PlayerRepository;
+import server.Data.ChessBoard.Movements.base.Position;
+import server.Repository.IPlayerRepository;
 
 @SpringBootApplication
-@EnableMongoRepositories(basePackageClasses = PlayerRepository.class)
+@EnableMongoRepositories(basePackageClasses = IPlayerRepository.class)
 public class Application {
 
     public static void main(String... args) {
-        ChessBoard chessBoard = new ChessBoard();
+        Position chessBoard = new Position(1,1);
         Gson gson = new Gson();
         System.out.println(gson.toJson(chessBoard));
         SpringApplication.run(Application.class, args);

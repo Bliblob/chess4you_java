@@ -1,19 +1,19 @@
-package server.Handler;
+package server.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import server.Data.Game.Player;
-import server.Repository.PlayerRepository;
+import server.Repository.IPlayerRepository;
 
 import java.util.HashMap;
-@Component
-public class PlayerHandler {
+@Service
+public class PlayerService {
 
     private HashMap<String, Player> ListPlayer = new HashMap<>();
-    private PlayerRepository playerRepository;
+    private IPlayerRepository playerRepository;
 
     @Autowired
-    public PlayerHandler(PlayerRepository playerRepository) {
+    public PlayerService(IPlayerRepository playerRepository) {
         this.playerRepository = playerRepository;
         for(Player player : this.playerRepository.findAll()){
             ListPlayer.put(player.getName(), player);
@@ -31,6 +31,7 @@ public class PlayerHandler {
     public boolean SetPlayer(Player player) {
         if(!PlayerExists(player.getName())){
             ListPlayer.put(player.getName(), player);
+            playerRepository.insert(player);
             return true;
         } else {
             return false;

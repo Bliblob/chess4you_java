@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import server.Data.Game.Player;
 
 @Repository
-public interface PlayerRepository extends MongoRepository<Player, String> {
+public interface IPlayerRepository extends MongoRepository<Player, String> {
 }

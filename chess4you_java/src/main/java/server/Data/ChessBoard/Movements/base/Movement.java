@@ -1,4 +1,4 @@
-package server.Data.ChessBoard.Movements;
+package server.Data.ChessBoard.Movements.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import server.Data.ChessBoard.Board.ChessEnum;
 @Getter @Setter
 @AllArgsConstructor
 public class Movement {
-    public Position newPosition;
-    public Position oldPosition;
-    public ChessEnum.Direction direction;
+    private Position newPosition;
+    private Position oldPosition;
+    private ChessEnum.Direction direction;
 }

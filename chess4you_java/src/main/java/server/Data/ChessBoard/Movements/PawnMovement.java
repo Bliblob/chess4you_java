@@ -1,21 +1,23 @@
 package server.Data.ChessBoard.Movements;
 
 import server.Data.ChessBoard.Board.ChessEnum;
+import server.Data.ChessBoard.Movements.base.Movement;
+import server.Data.ChessBoard.Movements.base.Position;
 
-public interface IPawnMovement {
-    static Movement FLEnPasse(Position position) {
+public class PawnMovement {
+    public Movement FLEnPasse(Position position) {
         return new Movement(
                 new Position(
                         position.getPosX() - 1,
                         position.getPosY() + 1),
-                position, ChessEnum.Direction.FLDiagonal);
+                position, ChessEnum.Direction.FLEnPasse);
     }
 
-    static Movement FREnPasse(Position position) {
+    public Movement FREnPasse(Position position) {
         return new Movement(
                 new Position(
                         position.getPosX() + 1,
                         position.getPosY() + 1),
-                position, ChessEnum.Direction.FLDiagonal);
+                position, ChessEnum.Direction.FREnPasse);
     }
 }

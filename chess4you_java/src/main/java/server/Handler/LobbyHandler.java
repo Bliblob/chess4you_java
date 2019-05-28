@@ -2,26 +2,28 @@ package server.Handler;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import server.Data.ChessBoard.Board.ChessEnum;
 import server.Data.Game.Player;
 import server.Data.Lobby.Lobby;
-import server.Service.GameService;
+import server.Service.GameDataService;
+import server.Service.PlayerService;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Component
 public class LobbyHandler {
-    private PlayerHandler playerHandler;
-    public GameService gameService;
+    private PlayerService playerHandler;
+    public GameDataService gameService;
 
     @Autowired
-    public LobbyHandler(PlayerHandler playerHandler, GameService gameService) {
+    public LobbyHandler(PlayerService playerHandler, GameDataService gameService) {
         this.playerHandler = playerHandler;
         this.gameService = gameService;
     }
 
-    public ArrayList<Lobby> getListLobby() {
-        return new ArrayList<>(gameService.getAllLobby());
+    public List<Lobby> getListLobby() {
+        return gameService.getAllLobby();
     }
 
     public Lobby getLobby(UUID uuid) {
@@ -31,23 +33,21 @@ public class LobbyHandler {
     public Lobby initLobby(String playerName, String iColor) {
         Lobby lobby;
         Player player = GetPlayer(playerName);
-        var color = iColor == "black" ? true : false;
-        lobby = new Lobby();
-        player.setColor(color);
-        lobby.setPlayerOne(player);
-        gameService.setGame(lobby);
-        /*if(!PlayerExistsInLobby(player)) {
-            lobby = new Lobby();
+        var color = iColor == "black" ? ChessEnum.Color.Black : ChessEnum.Color.White;
+        if(!PlayerExistsInLobby(player)) {
             player.setColor(color);
-            lobby.setPlayerOne(player);
+            lobby = new Lobby(player);
             gameService.setGame(lobby);
         } else {
             lobby = GetLobbyFromPlayer(player);
-        }*/
+        }
         return lobby;
     }
 
     private boolean PlayerExistsInLobby(Player player) {
+        if(gameService.getAllLobby() == null){
+            return false;
+        }
         var list = gameService.getAllLobby().stream()
                 .filter(data -> data.getPlayerOne().getName() == player.getName())
                 .toArray();
@@ -61,14 +61,13 @@ public class LobbyHandler {
                 .get();
     }
 
-    public Lobby JoinLobby(String playerName, UUID correctUuid) {
-        Lobby lobby = getLobby(correctUuid);
+    public Lobby JoinLobby(String playerName, String correctUuid) {
+        Lobby lobby = getLobby(UUID.fromString(correctUuid));
         Player player = GetPlayer(playerName);
         if (lobby.getPlayerOne().getName() == player.getName()) {
-        } else if(lobby.getStartGame()) {
         } else {
             lobby.setPlayerTwo(player);
-            //ListLobby.put(correctUuid, lobby);
+            gameService.setLobby(UUID.fromString(correctUuid),  lobby);
         }
         return lobby;
     }

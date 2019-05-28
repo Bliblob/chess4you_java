@@ -1,18 +1,15 @@
 package server.Data.ChessBoard.Board;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import server.Data.ChessBoard.Pieces.Piece;
 
 @Data
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class Field {
-    public Piece piece;
-    public Boolean isActive;
-
-    public Field() {
-
-    }
-
-    public Field(Piece piece) {
-        this.piece = piece;
-    }
+    private Piece piece;
+    @NonNull private Boolean isActive;
 }

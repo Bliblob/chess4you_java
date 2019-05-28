@@ -1,60 +1,67 @@
 package server.Controller;
 
 import com.google.gson.Gson;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-import server.Handler.LobbyHandler;
+import org.springframework.web.bind.annotation.*;
+import server.Handler.MainHandler;
 
-import java.util.UUID;
 
 
 @Slf4j
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class LobbyController {
 
-    private LobbyHandler lobbyHandler;
-    private Gson gson;
+    private MainHandler mainHandler;
 
     @Autowired
-    LobbyController(LobbyHandler lobbyHandler) {
-        this.lobbyHandler = lobbyHandler;
-        gson = new Gson();
+    LobbyController(MainHandler mainHandler) {
+        this.mainHandler = mainHandler;
     }
+
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/getListLobby")
+    @GetMapping("/getAllLobby")
     String getListLobby(){
-        return gson.toJson(lobbyHandler.getListLobby());
+        return mainHandler.getListLobby();
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/getLobby/{uuid}")
-    String getLobby(@PathVariable String uuid){
-        UUID correctUuid = UUID.fromString(uuid);
-        return gson.toJson(lobbyHandler.getLobby(correctUuid));
-    }
-    @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/initLobby/{playerName}/{color}")
-    String initLobby(@PathVariable("playerName") String playerName, @PathVariable("color") String color){
-        return gson.toJson(lobbyHandler.initLobby(playerName, color));
+    @GetMapping("/getLobby")
+    @ResponseBody
+    String getLobby(@RequestParam("lobbyUuid") String lobbyUuid){
+        return mainHandler.getLobby(lobbyUuid);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/joinLobby/{playerName}/{uuid}")
-    String joinLobby(@PathVariable("playerName") String playerName, @PathVariable("uuid") String uuid){
-        UUID correctUuid = UUID.fromString(uuid);
-        return gson.toJson(lobbyHandler.JoinLobby(playerName, correctUuid));
+    @PostMapping("/initLobby")
+    @ResponseBody
+    String initLobby(@RequestBody String dataInit){
+        var gson = new Gson();
+        var  object = gson.fromJson(dataInit,DataInit.class);
+        return mainHandler.initLobby(object.getPlayerName(), object.getColor());
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("getUpdateLobby/{uuid}")
-    String getUpdateLobby(@PathVariable String uuid){
-        UUID correctUuid = UUID.fromString(uuid);
-        return gson.toJson(lobbyHandler.getLobby(correctUuid));
+    @PostMapping("/joinLobby")
+    @ResponseBody
+    String joinLobby(@RequestBody String dataJoin){
+        var gson = new Gson();
+        var  object = gson.fromJson(dataJoin, DataJoin.class);
+        return mainHandler.joinLobby(object.getPlayerName(), object.getLobbyUuid());
     }
 
 }
+@Data
+class DataInit {
+    String playerName;
+    String color;
+}
 
+@Data
+class DataJoin {
+    String lobbyUuid;
+    String playerName;
+}

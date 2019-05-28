@@ -1,4 +1,4 @@
-package server.Data.ChessBoard.Movements;
+package server.Data.ChessBoard.Movements.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +7,6 @@ import lombok.Setter;
 @Getter @Setter
 @AllArgsConstructor
 public class Position {
-    public int PosX;
-    public int PosY;
+    private int PosX;
+    private int PosY;
 }
