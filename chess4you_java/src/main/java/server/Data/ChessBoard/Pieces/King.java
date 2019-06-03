@@ -10,5 +10,6 @@ public class King extends Piece {
                 ChessEnum.DirectionType.Linear,
                 ChessEnum.DirectionType.Diagonal,
         });
+        this.setType(ChessEnum.Piece.King);
     }
 }

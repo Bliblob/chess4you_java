@@ -43,8 +43,8 @@ public class MainHandler {
         return gson.toJson(playRoundHandler.info(lobbyUuid));
     }
 
-    public String getBoard(String lobbyUuid) {
-        return gson.toJson(playRoundHandler.getBoardState(lobbyUuid));
+    public String getBoard(String lobbyUuid, String playerUuid) {
+        return gson.toJson(playRoundHandler.getBoardState(lobbyUuid, playerUuid));
     }
 
     public String getTurn(String lobbyUuid, String playerUuid, String tmpPosition) throws Exception {
@@ -57,7 +57,6 @@ public class MainHandler {
     }
 
     public String doTurn(String lobbyUuid, String playerName, Movement movement) {
-        /*playRoundHandler.doTurn(lobbyUuid, playerName, movement)*/
-        return gson.toJson("ad");
+        return gson.toJson(playRoundHandler.doTurn(lobbyUuid, playerName, movement));
     }
 }

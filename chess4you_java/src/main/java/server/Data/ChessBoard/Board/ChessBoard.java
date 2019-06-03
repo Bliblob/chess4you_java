@@ -57,7 +57,7 @@ public class ChessBoard {
         listPosPiece.put(position, piece);
     }
 
-    public Field[][] generateChessBoard() {
+    public Field[][] generateChessBoard(boolean reverse) {
         int boardSize = 8;
         Field[][] chessBoard = new Field[boardSize][boardSize];
         for (int y = 0; y < boardSize; y++) {
@@ -65,8 +65,16 @@ public class ChessBoard {
              chessBoard[y][x] = new Field(false);
             }
         }
-        for(var entry : Collections.list(listPosPiece.keys())) {
-            chessBoard[entry.getPosY()][ entry.getPosX()] = new Field(listPosPiece.get(entry), true);
+        if(reverse) {
+            var reverseList = Collections.list(listPosPiece.keys());
+            Collections.reverse(reverseList);
+            for(var entry : reverseList) {
+                chessBoard[entry.getPosY()][ entry.getPosX()] = new Field(listPosPiece.get(entry), true);
+            }
+        } else {
+            for (var entry : Collections.list(listPosPiece.keys())) {
+                chessBoard[entry.getPosY()][entry.getPosX()] = new Field(listPosPiece.get(entry), true);
+            }
         }
         return chessBoard;
     }

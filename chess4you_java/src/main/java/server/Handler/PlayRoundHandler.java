@@ -3,14 +3,17 @@ package server.Handler;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import server.Data.ChessBoard.Board.ChessEnum;
 import server.Data.ChessBoard.Board.Field;
 import server.Data.ChessBoard.Movements.base.Movement;
 import server.Data.ChessBoard.Movements.base.Position;
 import server.Data.Game.Info;
+import server.Data.Lobby.Lobby;
 import server.Game.Game;
 import server.Service.GameDataService;
 import server.Validator.TurnValidator;
 
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -60,50 +63,65 @@ public class PlayRoundHandler {
         }
     }
 
-    /*public List<List<Field>> doTurn(String lobbyUuid, String playerUuid, Movement tmpMovement) {
+    public Field[][] doTurn(String lobbyUuid, String playerUuid, Movement tmpMovement) {
         var inList = tmpList.stream()
                 .filter(movement ->  turnValidator.movementAreEqual(movement, tmpMovement))
                 .findFirst();
+        var lobby = lobbyHandler.getLobby(UUID.fromString(lobbyUuid));
+        var game = gameDataService.getGame(UUID.fromString(lobbyUuid));
         if(inList != null){
-            var game = gameDataService.getGame(UUID.fromString(lobbyUuid));
+
             var duration = game.getLastChange();
             duration.setMinutes(10);
             if(game.getLastChange().getTime() < gameDataService.getCurrentDate() &&
             gameDataService.getCurrentDate() > duration.getTime()) {
                 if (game.getCurrentPlayer().getId() == playerUuid) {
-                    var oldPiece = game.getBoard()
-                            .getChessBoard()
-                            .get(inList.get().getOldPosition().getPosY())
-                            .get(inList.get().getOldPosition().getPosX()).getPiece();
-                    var newPiece = game.getBoard()
-                            .getChessBoard()
-                            .get(inList.get().getNewPosition().getPosY())
-                            .get(inList.get().getNewPosition().getPosX()).getPiece();
-                    game.getBoard()
-                            .getChessBoard()
-                            .get(inList.get().getOldPosition().getPosY())
-                            .get(inList.get().getOldPosition().getPosX()).setPiece(newPiece);
-                    game.getBoard()
-                            .getChessBoard()
-                            .get(inList.get().getNewPosition().getPosY())
-                            .get(inList.get().getNewPosition().getPosX()).setPiece(oldPiece);
+                    var piece = Collections.list(game.getBoard().getListPosPiece().elements())
+                            .stream()
+                            .filter(element -> element.getPosition() == inList.get().getOldPosition())
+                            .findFirst();
+
+                    game.getBoard().getListPosPiece()
+                            .put(inList.get().getNewPosition(), piece.get());
+
                     game.setLastChange(new Date());
-                    var lobby = lobbyHandler.getLobby(UUID.fromString(lobbyUuid));
+
                     if(lobby.getPlayerTwo().getId() == playerUuid) {
                         game.setCurrentPlayer(lobby.getPlayerOne());
                     } else {
                         game.setCurrentPlayer(lobby.getPlayerTwo());
                     }
                     game.setKingIsThreatenedResult(turnHandler.getPossibleThreadedPositionsForKing(game.getBoard(),game.getCurrentPlayer()));
-                    return game.getBoard().getChessBoard();
+                    return generateBoardForDoTurn(game, lobby);
                 }
             }
         }
-        return null;
-    }*/
+        return generateBoardForDoTurn(game, lobby);
+    }
 
-    public Field[][] getBoardState(String lobbyUuid) {
-        return gameDataService.getGame(UUID.fromString(lobbyUuid)).getBoard().generateChessBoard();
+    private Field[][] generateBoardForDoTurn(Game game, Lobby lobby) {
+        if(game.getCurrentPlayer().getId() == lobby.getPlayerTwo().getId()) {
+            if(lobby.getPlayerTwo().getColor() == ChessEnum.Color.White) {
+                return game.getBoard().generateChessBoard(true);
+            } else {
+                return game.getBoard().generateChessBoard(false);
+            }
+        } else {
+            if(lobby.getPlayerOne().getColor() ==  ChessEnum.Color.White) {
+                return game.getBoard().generateChessBoard(true);
+            } else {
+                return game.getBoard().generateChessBoard(false);
+            }
+        }
+    }
+
+    public Field[][] getBoardState(String lobbyUuid, String playerUuid) {
+        var game =  gameDataService.getGame(UUID.fromString(lobbyUuid));
+        if(game.getCurrentPlayer().getColor() == ChessEnum.Color.White)  {
+            return game.getBoard().generateChessBoard(true);
+        } else {
+            return game.getBoard().generateChessBoard(false);
+        }
     }
 
     public Game startGame(String lobbyUuid) {

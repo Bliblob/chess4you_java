@@ -9,5 +9,6 @@ public class Queen extends Piece {
                 ChessEnum.DirectionType.Diagonal,
                 ChessEnum.DirectionType.Linear,
         });
+        this.setType(ChessEnum.Piece.Queen);
     }
 }

@@ -8,5 +8,6 @@ public class Knight extends Piece {
         this.setDirections(new ChessEnum.DirectionType[]{
                 ChessEnum.DirectionType.Knight
         });
+        this.setType(ChessEnum.Piece.Knight);
     }
 }

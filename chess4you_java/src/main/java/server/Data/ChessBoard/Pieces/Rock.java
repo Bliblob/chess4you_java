@@ -9,5 +9,6 @@ public class Rock extends Piece {
         this.setDirections(new ChessEnum.DirectionType[]{
                 ChessEnum.DirectionType.Linear,
         });
+        this.setType(ChessEnum.Piece.Rock);
     }
 }

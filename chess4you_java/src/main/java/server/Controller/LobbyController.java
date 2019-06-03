@@ -1,6 +1,9 @@
 package server.Controller;
 
 import com.google.gson.Gson;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import lombok.var;
@@ -11,8 +14,8 @@ import server.Handler.MainHandler;
 
 
 @Slf4j
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
+@Api(description = "Controller for creating or retrieving Lobbies")
 public class LobbyController {
 
     private MainHandler mainHandler;
@@ -24,6 +27,7 @@ public class LobbyController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/getAllLobby")
+    @ApiOperation("Return a List of all Lobbies")
     String getListLobby(){
         return mainHandler.getListLobby();
     }
@@ -31,14 +35,16 @@ public class LobbyController {
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/getLobby")
     @ResponseBody
-    String getLobby(@RequestParam("lobbyUuid") String lobbyUuid){
+    @ApiOperation("Return a specific Lobby by their uuid.")
+    String getLobby(@ApiParam("The uuid of the lobby Cannot be null!") @RequestParam("lobbyUuid") String lobbyUuid){
         return mainHandler.getLobby(lobbyUuid);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/initLobby")
     @ResponseBody
-    String initLobby(@RequestBody String dataInit){
+    @ApiOperation("Initialize a Lobby")
+    String initLobby(@ApiParam("The serialized DataInit Object. Cannot be null!") @RequestBody String dataInit){
         var gson = new Gson();
         var  object = gson.fromJson(dataInit,DataInit.class);
         return mainHandler.initLobby(object.getPlayerName(), object.getColor());
@@ -47,7 +53,8 @@ public class LobbyController {
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/joinLobby")
     @ResponseBody
-    String joinLobby(@RequestBody String dataJoin){
+    @ApiOperation("Join a specific Lobby by their uuid")
+    String joinLobby(@ApiParam("The serialized DataJoin Object. Cannot be null!") @RequestBody String dataJoin){
         var gson = new Gson();
         var  object = gson.fromJson(dataJoin, DataJoin.class);
         return mainHandler.joinLobby(object.getPlayerName(), object.getLobbyUuid());

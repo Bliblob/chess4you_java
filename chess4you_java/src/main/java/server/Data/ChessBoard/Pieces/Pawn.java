@@ -1,6 +1,5 @@
 package server.Data.ChessBoard.Pieces;
 
-import lombok.Getter;
 import server.Data.ChessBoard.Board.ChessEnum;
 
 public class Pawn extends Piece {
@@ -10,5 +9,6 @@ public class Pawn extends Piece {
                 ChessEnum.DirectionType.Pawn,
                 ChessEnum.DirectionType.Linear,
         });
+        this.setType(ChessEnum.Piece.Pawn);
     }
 }

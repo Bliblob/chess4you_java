@@ -18,7 +18,7 @@ public class TurnValidator {
             case Pawn:
                 return piece.getPosition().getPosY() == 1
                         || piece.getPosition().getPosY() == 6;
-            case Knight:
+            case King:
                 return (piece.getPosition().getPosY() == 0
                         && piece.getPosition().getPosX() == 4)
                         || (piece.getPosition().getPosY() == 7
@@ -37,12 +37,12 @@ public class TurnValidator {
         }
     }
 
-    public ChessEnum.PositionType pieceOnPosition(Dictionary<Position, Piece> listPiece, Position position, Piece piece) {
-       ArrayList<Position> listPosition = Collections.list(listPiece.keys());
+    public ChessEnum.PositionType pieceOnPosition(Dictionary<Position, Piece> listPosPiece, Position position, Piece piece) {
+       ArrayList<Position> listPosition = Collections.list(listPosPiece.keys());
        for(var position2 : listPosition) {
             if( position2.getPosX() == position.getPosX() &&
                     position2.getPosY() == position.getPosY()) {
-                if(listPiece.get(position2).getColor() == piece.getColor()) {
+                if(listPosPiece.get(position2).getColor() == piece.getColor()) {
                     return ChessEnum.PositionType.Friendly;
                 } else {
                     return ChessEnum.PositionType.Enemeny;
@@ -53,10 +53,10 @@ public class TurnValidator {
     }
 
     public boolean possibleMovementOnBoard(Movement movement) {
-       return movement.getNewPosition().getPosY() >= 1
-               && movement.getNewPosition().getPosY() <= 8
-               && movement.getNewPosition().getPosX() >= 1
-               && movement.getNewPosition().getPosX() <= 8;
+       return movement.getNewPosition().getPosY() >= 0
+               && movement.getNewPosition().getPosY() <= 7
+               && movement.getNewPosition().getPosX() >= 0
+               && movement.getNewPosition().getPosX() <= 7;
     }
 
     public boolean movementAreEqual(Movement firstMovement, Movement secondMovement) {

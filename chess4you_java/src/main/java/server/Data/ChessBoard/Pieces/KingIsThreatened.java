@@ -13,5 +13,6 @@ public class KingIsThreatened extends Piece{
                 ChessEnum.DirectionType.Knight,
                 ChessEnum.DirectionType.Diagonal,
         });
+        this.setType(ChessEnum.Piece.King);
     }
 }
